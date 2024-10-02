@@ -4,6 +4,7 @@ The goal of this technical assessment is to develop a containerized Python appli
 - Code organisation between source, test, Continuous Integration (CI)...
 - Development of a Python program to call a `process` function though the invokation of AWS Lambda function, a REST API or the execution of a CLI in the terminal.
 - Configuration of a Continuous Integration pipeline using Github Actions to automate application testing and packaging.
+- Set up a local Kubernetes cluster and deploy your application in an automated manner.
 
 ## Create a repository from this template
 
@@ -92,3 +93,15 @@ Using the Docker image, write a small bash script to invoke the lambda function 
 ...
 ```
 
+## 🎯 Deploy your application in a local Kubernetes cluster
+
+Set up a local Kubernetes cluster using [k3d](https://k3d.io/v5.7.4/) (k3d and kubectl CLI are already installed by the devcontainer configuration).
+
+Deploy you lambda application in the cluster.
+
+Write a small bash script to invoke the lambda function deployed in the cluster using `curl`.
+```bash
+...
+```
+
+Propose a solution to automate the cluster provisioning localy and the deployment of the lambda application.
