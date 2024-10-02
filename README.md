@@ -21,18 +21,18 @@ The project uses [Poetry](https://python-poetry.org/) as Python dependency manag
 3. `poetry install` create a virtual environment and install the Python packages
 4. `poetry shell` activate the virtual environment in the terminal 
 
-## Organize the code of the Python application
+## 🎯 Organize the code of the Python application
 
 Throughout the assessment, you are responsible for organizing your code directories clearly and explicitly (source and test files, CI/CD workflow...).
 
-## Develop the application
+## 🎯 Develop the application
 
 The Python source directory is `lambda_app`.
 Fill the lambda entry point `lambda_handler` to process the string message received as input and sent back the processed message.
 The `events` directory contains sample event files that can be received by the lambda function.
 You are also responsible for developing the corresponding unit tests.
 
-## Check coding rules and test the application
+## 🎯 Check coding rules and test the application
 
 Coding rules are checked with `ruff` (coding rules are set in `pyproject.toml`).
 Unit testing is run by `pytest` and code coverage with `pytest-cov`.
@@ -44,7 +44,7 @@ pytest --cov-report term-missing --cov=lambda_app python/test/dir
 
 You are responsible for developing a Python code having the highest possible test coverage score and having the lowest possible coding rules errors/warnings.
 
-## Set up the CI/CD
+## 🎯 Set up the CI/CD
 
 Design a CI/CD workflow using Github actions to automatically:
 - check coding rules with ruff
@@ -54,7 +54,7 @@ Design a CI/CD workflow using Github actions to automatically:
 
 You are responsible for providing a working CI/CD with 'success' status on the final commit.
 
-## Build the application
+## 🎯 Build the application
 Fill the `Dockerfile` to package your lambda function using the base image `public.ecr.aws/lambda/python:3.12`.
 
 Write a bash command to build the image from the `Dockerfile`.
@@ -63,10 +63,10 @@ Write a bash command to build the image from the `Dockerfile`.
 ...
 ```
 
-## Invoke the application
+## 🎯 Invoke the application locally
 
 
-### With SAM CLI locally
+### With SAM CLI
 
 The [SAM CLI](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/what-is-sam.html) can be used to build a container image compatible with the AWS Lambda service. The SAM CLI can also invoke locally the lambda function. The SAM CLI is a Python dependency of the project and therefore installed by the dependency manager Poetry.
 
