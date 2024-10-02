@@ -4,7 +4,7 @@ version = "1.0.0"
 description = ""
 authors = ["Rémy Lopez <r.lopez@vortex-io.fr>"]
 readme = "README.md"
-packages = [{include = "lambda_app"}] # TODO set python packages to include
+packages = [{include = "lambda_app"}]
 
 [tool.poetry.dependencies]
 python = "^3.12"
