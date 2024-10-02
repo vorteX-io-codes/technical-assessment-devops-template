@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "technical-assessment-devops-template"
+version = "1.0.0"
+description = ""
+authors = ["Rémy Lopez <r.lopez@vortex-io.fr>"]
+readme = "README.md"
+packages = [{include = "lambda_app"}] # TODO set python packages to include
+
+[tool.poetry.dependencies]
+python = "^3.12"
+click = "^8.1.7"
+
+[tool.poetry.group.build]
+optional = false
+
+[tool.poetry.group.build.dependencies]
+aws-sam-cli = "^1.119.0"
+
+[tool.poetry.group.test]
+optional = false
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.2"
+pytest-cov = "^5.0"
+ruff = "^0.4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
