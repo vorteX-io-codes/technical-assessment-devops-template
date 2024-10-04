@@ -1,10 +1,8 @@
 """Entry points for the application."""
 
 import logging
-import sys
-from typing import Dict, NoReturn, Union
+from typing import Dict, Union
 
-import click
 
 logger = logging.getLogger()
 logger.setLevel('INFO')
@@ -12,18 +10,7 @@ logger.setLevel('INFO')
 
 def process(message: str) -> str:
     """Process message. The application logic is impleted here.
-    Nothing to change for the assessment
-
-    Parameters
-    ----------
-    message : str
-        input message
-
-    Returns
-    -------
-    str
-        processed message
-
+    Nothing to implement for the assessment.
     """
     return f"The received message is: '{message}'"
 
@@ -58,7 +45,7 @@ def lambda_handler(event: LambdaEvent, context: LambdaContext) -> LambdaOutput: 
 
     """
 
-    # TODO: write the lambda handler in a *robust* maner to:
+    # TODO: write the lambda handler in a *robust* manner to:
     # - fetch the message in the event body of the LambdaEvent
     # - call the above 'process' function with the message and get the returned value
     # - return the LambdaOutput with the following format:
@@ -70,26 +57,3 @@ def lambda_handler(event: LambdaEvent, context: LambdaContext) -> LambdaOutput: 
 
     ...
 
-
-@click.command()
-@click.option('-m', '--message', required=True, help='Message')
-def main(message: str) -> NoReturn:  # pragma: no cover
-    """Entrypoint for application CLI.
-
-    Parameters
-    ----------
-    message : str
-        input message
-
-    """
-    consoleHandler = logging.StreamHandler(sys.stdout)
-    logger.addHandler(consoleHandler)
-
-    result = process(message)
-    logger.info(result)
-
-    sys.exit(0)
-
-
-if __name__ == '__main__':  # pragma: no cover
-    main()

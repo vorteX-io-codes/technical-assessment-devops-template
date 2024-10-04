@@ -8,7 +8,6 @@ packages = [{include = "lambda_app"}]
 
 [tool.poetry.dependencies]
 python = "^3.12"
-click = "^8.1.7"
 
 [tool.poetry.group.build]
 optional = false
@@ -27,3 +26,13 @@ ruff = "^0.4"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.ruff.lint]
+select = ['ALL']
+ignore = ['FA', 'D']
+
+[tool.ruff.lint.per-file-ignores]
+'tests/**' = ['S101', 'ANN', 'PLR', 'ARG', 'INP001', 'E501']
+
+[tool.ruff.lint.flake8-quotes]
+inline-quotes = "single"
