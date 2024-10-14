@@ -38,6 +38,8 @@ Throughout the assessment, design step by step a CI/CD workflow using Github act
 - provision the local Kubernetes cluster and deploy the lambda function when the code is updated
 - ...
 
+The CI/CD is initialized with a minimal workflow implementing the check of coding rules and the test of the lambda function.
+
 ## 🎯 Develop the Lambda function entrypoint
 
 The Python source directory is `lambda_app`.
