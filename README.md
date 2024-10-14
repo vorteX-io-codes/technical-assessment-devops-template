@@ -1,8 +1,8 @@
 # DevOps technical assessment
 
 The goal of this technical assessment is to package a small Python function as an AWS Lambda and to deploy it in a local Kubernetes cluster. The assessment covers several points:
-- Development of the AWS Lambda entrypoint in Python to be invoked as AWS Lambda function or via an HTTP request.
-- Automatic deployment of the function in a local Kubernetes cluster.
+- Development of the AWS Lambda entrypoint in Python to be invoked as an AWS Lambda function or via an HTTP request.
+- Automatic deployment of the function in a local Kubernetes cluster with application monitoring.
 - Configuration of a Continuous Integration workflows using Github Actions to automate testing, packaging and deployment.
 - Code organization between source, test, Continuous Integration (CI) workflows, Kubernetes manifest files...
 
@@ -32,8 +32,8 @@ You are responsible for organizing your code directories clearly and explicitly 
 
 Throughout the assessment, design step by step a CI/CD workflow using Github actions to automatically:
 - build the Docker image of the lambda function
-- check coding rules with ruff
-- test and measure test coverage with pytest and pytest-cov
+- check coding rules with ruff (already included in the base workflow)
+- test and measure test coverage with pytest and pytest-cov  (already included in the base workflow)
 - invoke the lambda function locally using `curl` and check its response as integration test. 
 - provision the local Kubernetes cluster and deploy the lambda function when the code is updated
 - ...
@@ -104,4 +104,10 @@ Write a small bash script to invoke the lambda function deployed in the cluster 
 ...
 ```
 
+## 🎯 Automate Kubernetes cluster deployment and code update
+
 Propose a solution to automate the cluster provisioning locally and the deployment of the lambda application when the code is updated.
+
+## 🎯 Monitor your application
+
+Propose a solution to monitor the deployed lambda application: logs and execution metrics. Include this as part of the automatic deployment.
