@@ -8,6 +8,8 @@ The goal of this technical assessment is to package a small Python function as a
 
 There is no single correct answer to this technical assessment. You are free to use any tools to build your solution.
 
+The goal is to cover all aspects of the technical assessment. If you have questions or feel stuck, contact vorteX-io.
+
 ## Create a Repository from This Template
 
 Recommended configuration:
